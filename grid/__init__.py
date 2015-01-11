@@ -25,6 +25,6 @@ def image(cols, width, height, gutter):
 
     buffer = BytesIO()
     img = draw(cols, width, height, gutter, **colors)
-    img.save(buffer, format='JPEG')
+    img.save(buffer, format='JPEG', quality=100)
     buffer.seek(0)
     return send_file(buffer, mimetype='image/jpeg')

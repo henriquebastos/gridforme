@@ -23,5 +23,5 @@ def test_image_url(app):
 def test_image_content(app):
     rv = app.get('/i/12/95/30/15/')
 
-    with open('tests/thegrid.png', 'rb') as img:
+    with open('tests/thegrid.jpeg', 'rb') as img:
         assert img.read() == rv.data
