@@ -1,8 +1,7 @@
-from io import BytesIO
 from flask import Flask, send_file, request
 
 from grid.colors import color
-from grid.image import draw
+from grid.image import draw, mempng
 
 
 app = Flask(__name__)
@@ -23,8 +22,6 @@ def image(cols, width, height, gutter):
               for p in ['bg', 'v', 'h']
               if p in request.args}
 
-    buffer = BytesIO()
-    img = draw(cols, width, height, gutter, **colors)
-    img.save(buffer, format='JPEG', quality=100)
-    buffer.seek(0)
-    return send_file(buffer, mimetype='image/jpeg')
+    grid = mempng(draw(cols, width, height, gutter, **colors))
+
+    return send_file(grid, mimetype='image/png')
