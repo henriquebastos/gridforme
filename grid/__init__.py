@@ -25,11 +25,6 @@ def image(cols, width, height, gutter):
 
     buffer = BytesIO()
     img = draw(cols, width, height, gutter, **colors)
-    img.save(buffer, format='PNG')
+    img.save(buffer, format='JPEG')
     buffer.seek(0)
-    return send_file(buffer, mimetype='image/png')
-
-
-if __name__ == '__main__':
-    #app.debug = True
-    app.run()
+    return send_file(buffer, mimetype='image/jpeg')
