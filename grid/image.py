@@ -1,4 +1,6 @@
 # coding: utf-8
+from functools import partial
+from io import BytesIO
 from PIL import Image, ImageDraw
 
 
@@ -65,3 +67,21 @@ def draw(cols, width, height, gutter=0, bg=TRANSPARENT, v=BLUE, h=PINK):
     draw.line([(0, bb), (gw, bb)], width=1, fill=h)
 
     return grid
+
+
+def memfile(image, format, **options):
+    """
+    Saves the image to a file in memory.
+    :param image: PIL Image.
+    :param format: PIL supported format string.
+    :param options: format options.
+    :return: file like object
+    """
+    buffer = BytesIO()
+    image.save(buffer, format, **options)
+    buffer.seek(0)
+    return buffer
+
+
+memjpeg = partial(memfile, format='JPEG', quality=100)
+mempng  = partial(memfile, format='PNG', quality=100)
