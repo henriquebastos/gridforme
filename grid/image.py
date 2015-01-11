@@ -2,9 +2,9 @@
 from PIL import Image, ImageDraw
 
 
-TRANSPARENT = (255, 255, 255, 255)
-BLUE = (0, 103, 255, 0)
-PINK = (255, 0, 255, 0)
+TRANSPARENT = (255, 255, 255, 0)
+BLUE = (0, 103, 255, 255)
+PINK = (255, 0, 255, 255)
 
 
 def vlines(cols, width, height, gutter=0):
