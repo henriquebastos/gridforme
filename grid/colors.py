@@ -20,8 +20,8 @@ def hexcolor(value):
         return None
 
     components = match.groups()
-    components = [int(c or '0', 16) for c in components]
-    components += [0] * (4 - len(components))
+    components = [int(c or 'ff', 16) for c in components]
+    components += [255] * (4 - len(components))
 
     return tuple(components)
 
@@ -39,13 +39,13 @@ def rgbcolor(value):
     if not match:
         return None
 
-    components = [min(int(c or '0'), 255) for c in match.groups()]
-    components += [0] * (4 - len(components))
+    components = [min(int(c or '255'), 255) for c in match.groups()]
+    components += [255] * (4 - len(components))
 
     return tuple(components)
 
 
-def color(value, default=(0, 0, 0, 0)):
+def color(value, default=(0, 0, 0, 255)):
     """
     Convert hex or rgb color strings to RGBA tuple.
     """
