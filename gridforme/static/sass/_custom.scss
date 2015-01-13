@@ -1,0 +1,39 @@
+.site-header {
+  @extend .row;
+  @extend .min-h-4;
+
+  header {
+    @extend .header;
+    @extend .header-inline;
+    @extend .min-h-3;
+    @extend .row;
+    @extend .desktop-8;
+    @extend .container;
+  }
+
+  nav {
+    @extend .nav-inline;
+  }
+}
+
+hr {
+  @extend .hide;
+}
+
+.site-content {
+  @extend .desktop-8;
+  @extend .container;
+
+  section {
+    @extend .row;
+  }
+}
+
+footer {
+  @extend .desktop-8;
+  @extend .container;
+
+  div {
+    @extend .padding-top-1;
+  }
+}
