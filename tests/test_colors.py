@@ -1,5 +1,5 @@
 # coding: utf-8
-from grid.colors import color, rgbcolor, hexcolor
+from gridforme.colors import color, rgbcolor, hexcolor
 
 
 def test_hexcolor():

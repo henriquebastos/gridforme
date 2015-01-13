@@ -1,12 +1,12 @@
 #!/usr/bin/env python
 # coding: utf-8
 import sys
-from grid import app
+from gridforme import app
 
 
 def regenerate_fixture_images():
     # Helper function to regenerate test fixture images
-    from grid.image import draw
+    from gridforme.image import draw
     d = draw(12, 95, 30, 15)
     d.save('tests/thegrid.jpeg', format='JPEG', quality=100)
     d.save('tests/thegrid.png', format='PNG')

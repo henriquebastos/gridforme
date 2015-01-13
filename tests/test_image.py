@@ -1,5 +1,5 @@
 # coding: utf-8
-from grid.image import vlines, draw, memjpeg, mempng
+from gridforme.image import vlines, draw, memjpeg, mempng
 
 
 def test_vlines():

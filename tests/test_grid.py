@@ -1,13 +1,12 @@
 # coding: utf-8
 import pytest
-from PIL import Image
-import grid
+import gridforme
 
 
 @pytest.fixture
 def app():
-    grid.app.config['TESTING'] = True
-    return grid.app.test_client()
+    gridforme.app.config['TESTING'] = True
+    return gridforme.app.test_client()
 
 
 def test_home_url(app):
