@@ -1,0 +1,96 @@
+
+/*  Imagens
+
+    Exemplo de aplicação:
+    <div class="img img-align-text frame-h-27x8">
+      <img src="nome_da_image.png" height="530" width="800">
+    </div>
+    Onde img-col-(número de coluna) especifica a largura máxima
+    da caixa da imagem. Contudo, a imagem ficará menor,
+    porque a regra CSS desconta os espaços laterais (padding)
+    para o alinhamento com o texto.
+*/
+
+.img img,
+figure img {
+    width: 100%;
+    height: auto;
+}
+
+.img,
+figure {
+    position: relative;
+}
+
+.img:after,
+figure:after {
+    content: "";
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+figcaption,
+.img-legend {
+    font-size: 1em;
+    line-height: 1em;
+    text-align: right;
+    padding: 1.10em 0.5em 0;
+    width: 100%;
+    min-height: $basal-leading;
+    background-color: #ffffff;
+    opacity: 1;
+    position: absolute;
+    bottom: 0;
+}
+
+figcaption a,
+.img-legend a { text-decoration: none; }
+
+
+/*
+    img-align-text
+    A imagem fica alinhada com a altura
+    da letra capitular (cap height) do texto.
+*/
+
+.img-align-title { margin-top: 0; }
+
+.img-align-text { padding-top: 1.4em; }
+
+
+
+/* Primeiro ajuste de layout, quando menos que o tamanho máximo + 10 pixels */
+
+@media (max-width: ($basal-max-width + 10)) {
+
+    .img,
+    figure { padding: ($basal-leading / 2) 0; }
+
+    figcaption,
+    .img-legend { position: relative; }
+
+    .img-align-text {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+}
+/* FIM do primeiro ajuste de layout */
+
+
+/* @media (max-width: 800px) */
+
+@media (max-width: 800px) {
+
+    .img,
+    figure { padding: ($basal-leading / 2) $basal-padding; }
+
+}
+/* @media (max-width: 800px) */
+
+/* FIM Imagens */
+
