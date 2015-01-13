@@ -1,15 +1,17 @@
-from flask import Flask, send_file, request
+from flask import Flask, send_file, request, render_template
+from flask.ext.markdown import Markdown
 
 from grid.colors import color
 from grid.image import draw, mempng
 
 
 app = Flask(__name__)
+markdown = Markdown(app)
 
 
 @app.route('/')
-def hello_world():
-    return 'Opa!'
+def index():
+    return render_template('index.html')
 
 
 @app.route('/i/<int:cols>/<int:width>/<int:height>/', defaults={'gutter': 0})

@@ -1,0 +1,154 @@
+<!doctype html>
+<!-- Define a linguagem de conteúdo para Português do Brasil -->
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>BasalStyle - Formulários</title>
+
+    <meta name="author" content="Henrique Bastos">
+
+    <meta name="description" content="Easy grid overlay for your perfect web design.">
+
+    <!-- Adivinha! JavaScript para fazer os IEs entenderem os novos tags HTML5. -->
+    <!--[if IE]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Carrega a folha de estilo BasalStyle -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <!-- Carrega a folha de estilo de customização -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.customize.css') }}">
+
+    <!-- Carrega CSS Externos -->
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,300,800,700' rel='stylesheet' type='text/css'>
+
+</head>
+<body class="debug">
+    <div class="row min-h-4">
+        <header class="header header-inline min-h-3 row desktop-12 container" role="banner">
+            <div class="site-logo">
+                <h1><a href="#" rel="home">gridfor.me</a></h1>
+                <p class="site-description">Easy grid overlay for your perfect web design.</p>
+            </div>
+
+            <nav class="nav-inline" role="navigation">
+                <a href="javascript:void(0);" class="nav-mobile"><i class="fa fa-bars"></i></a>
+                <ul>
+                    <li><a href="#what">Intro</a></li>
+                    <li><a href="#how">Customize</a></li>
+                    <li><a href="#examples">Examples</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- END header -->
+    </div>
+
+    <hr class="hide">
+
+    <div class="content desktop-12 container">
+        <section class="row">
+            <header>
+                <h2 id="what">What is it?</h2>
+            </header>
+
+{% filter markdown %}
+Grid overlays helps you to keep you design consistent. It allows you to maintain both vertical rhythm and horizontal alignment.
+
+Using [gridfor.me](http://gridfor.me) you create an overlay by simply adding a stylesheet to your page:
+
+`<link rel="stylesheet" href="http://gridfor.me/12/95/30/15/">`
+
+Just like that. You'll get you a grid overlay with 12 columns, 95px width cells, 30px baseline and 15px gutter. Just like the one you can see on this page.
+{% endfilter %}
+        </section>
+        <section class="row">
+            <header>
+                <h2 id="how">Make it yours</h2>
+            </header>
+
+{% filter markdown %}
+You can customize every aspect of your grid.
+
+Understand the parameters:
+
+`http://gridfor.me/columns/cellwidth/baseline/[gutter]/?bg=R,G,B,A&h=R,G,B&v=HEX`
+
+- *columns* defines how many columns there are on the grid.
+- *cellwidth* defines how wide each cell is including gutters.
+- *baseline* defines the height of each row on the grid.
+- *gutter* defines the width of both left and right gutters. This is *optional* and *defaults to 0px*.
+- *bg* is the background color.
+- *h* is the horizontal lines color.
+- *v* is the vertical lines color.
+
+Colors are **RGBA** and can be expressed in the forms:
+
+- `0067ff`
+- `0067ffff`
+- `255,0,255`
+- `255,0,255,128`
+
+*Note*: If you omit the alpha component it defaults to **opaque**.
+{% endfilter %}
+        </section>
+        <section class="row">
+            <header>
+                <h3 id="examples">Grid examples</h3>
+            </header>
+
+{% filter markdown %}
+8 columns, 120px width cells, 24px baseline, no gutters, white transparent background, pink baseline and blue columns.
+
+```
+<link rel="stylesheet" href="http://gridfor.me/8/120/24/?bg=ffffffff&h=255,0,255&v=0,133,255">
+```
+
+16 columns, 80px width cells, 32px baseline, 16px gutters, blue half-transparet background, black baseline and ping columns.
+
+```
+<link rel="stylesheet" href="http://gridfor.me/16/80/32/16/?bg=0,0,255,127&h=000000&v=ff00ff">
+```
+{% endfilter %}
+
+        </section>
+        <section class="row">
+            <header>
+                <h3 id="image">Getting only the grid image</h3>
+            </header>
+
+{% filter markdown %}
+If you just want the grid image to use in your own fashion, simply prepend the url path with an `i`:
+
+`http://gridfor.me/i/12/95/30/15/`
+
+So your CSS may be:
+
+```
+html { background-image: url(http://gridfor.me/i/12/95/30/15/); }
+```
+{% endfilter %}
+
+        </section>
+    </div>
+    <!-- END content -->
+
+    <hr class="hide">
+
+    <div class="ruler-top">
+        <footer class="footer desktop-12 container">
+            <div class="padding-top-1">
+{% filter markdown %}
+Inspired by [basehold.it](http://basehold.it) and shared with you by [Henrique Bastos](http://henriquebastos.net/me) & [Vinícius Braga](http://viniciusbraga.info/).
+{% endfilter %}
+            </div>
+        </footer>
+        <!-- END footer -->
+    </div>
+
+</body>
+</html>
