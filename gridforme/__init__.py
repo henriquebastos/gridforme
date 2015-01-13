@@ -1,8 +1,8 @@
 from flask import Flask, send_file, request, render_template
 from flask.ext.markdown import Markdown
 
-from grid.colors import color
-from grid.image import draw, mempng
+from gridforme.colors import color
+from gridforme.image import draw, mempng
 
 
 app = Flask(__name__)
