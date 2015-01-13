@@ -30,15 +30,16 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,300,800,700' rel='stylesheet' type='text/css'>
 
 </head>
-<body class="debug">
-    <div class="row min-h-4">
-        <header class="header header-inline min-h-3 row desktop-12 container" role="banner">
+<body>
+<div class="container">
+    <div class="site-header">
+        <header role="banner">
             <div class="site-logo">
                 <h1><a href="#" rel="home">gridfor.me</a></h1>
                 <p class="site-description">Easy grid overlay for your perfect web design.</p>
             </div>
 
-            <nav class="nav-inline" role="navigation">
+            <nav role="navigation">
                 <a href="javascript:void(0);" class="nav-mobile"><i class="fa fa-bars"></i></a>
                 <ul>
                     <li><a href="#what">Intro</a></li>
@@ -50,10 +51,10 @@
         <!-- END header -->
     </div>
 
-    <hr class="hide">
+    <hr>
 
-    <div class="content desktop-12 container">
-        <section class="row">
+    <div class="site-content">
+        <section>
             <header>
                 <h2 id="what">What is it?</h2>
             </header>
@@ -68,7 +69,7 @@ Using [gridfor.me](http://gridfor.me) you create an overlay by simply adding a s
 Just like that. You'll get you a grid overlay with 12 columns, 95px width cells, 30px baseline and 15px gutter. Just like the one you can see on this page.
 {% endfilter %}
         </section>
-        <section class="row">
+        <section>
             <header>
                 <h2 id="how">Make it yours</h2>
             </header>
@@ -98,7 +99,7 @@ Colors are **RGBA** and can be expressed in the forms:
 *Note*: If you omit the alpha component it defaults to **opaque**.
 {% endfilter %}
         </section>
-        <section class="row">
+        <section>
             <header>
                 <h3 id="examples">Grid examples</h3>
             </header>
@@ -118,7 +119,7 @@ Colors are **RGBA** and can be expressed in the forms:
 {% endfilter %}
 
         </section>
-        <section class="row">
+        <section>
             <header>
                 <h3 id="image">Getting only the grid image</h3>
             </header>
@@ -139,19 +140,18 @@ html { background-image: url(http://gridfor.me/i/12/95/30/15/); }
     </div>
     <!-- END content -->
 
-    <hr class="hide">
+    <hr>
 
-    <div class="ruler-top">
-        <footer class="footer desktop-12 container">
-            <div class="padding-top-1">
+    <footer>
+        <div>
 {% filter markdown %}
 Inspired by [basehold.it](http://basehold.it) and shared with you by [Henrique Bastos](http://henriquebastos.net/me) & [Vinícius Braga](http://viniciusbraga.info/).
 
 Contribute on [Github](https://github.com/henriquebastos/gridforme).
 {% endfilter %}
-            </div>
-        </footer>
+        </div>
+    </footer>
         <!-- END footer -->
-    </div>
+</div>
 </body>
 </html>
