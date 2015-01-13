@@ -1,4 +1,4 @@
-from flask import Flask, send_file, request, render_template
+from flask import Flask, send_file, request, render_template, url_for, Response
 from flask.ext.markdown import Markdown
 
 from gridforme.colors import color
@@ -12,6 +12,18 @@ markdown = Markdown(app)
 @app.route('/')
 def index():
     return render_template('index.html')
+
+
+@app.route('/<int:cols>/<int:width>/<int:height>/', defaults={'gutter': 0})
+@app.route('/<int:cols>/<int:width>/<int:height>/<int:gutter>/')
+def style(cols, width, height, gutter):
+    """
+    Returns the generated stylesheet with the grid.
+    """
+    path = url_for('image', cols=cols, width=width, height=height, gutter=gutter, **request.args)
+
+    return Response(response=render_template('style.tpl', imagepath=path),
+                    status=200, mimetype="text/css")
 
 
 @app.route('/i/<int:cols>/<int:width>/<int:height>/', defaults={'gutter': 0})
