@@ -1,1 +1,1 @@
-web: gunicorn grid:app --log-file=-
+web: gunicorn gridforme:app --log-file=-
