@@ -31,6 +31,16 @@
 
 </head>
 <body>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&appId=265975286907737&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
 <div class="container">
     <div class="site-header">
         <header role="banner">
@@ -54,6 +64,25 @@
     <hr>
 
     <div class="site-content">
+
+        <div class="site-social">
+            <div class="facebook">
+                <div class="fb-like" data-href="http://gridfor.me" data-layout="button" data-action="like" data-show-faces="true" data-share="true"></div>
+            </div>
+            <div class="twitter">
+                <a href="https://twitter.com/share" class="twitter-share-button" data-count="none" data-url="http://gridfor.me">Tweet</a>
+                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+            </div>
+            <div class="gplus">
+                <!-- Posicione esta tag no cabeçalho ou imediatamente antes da tag de fechamento do corpo. -->
+                <script src="https://apis.google.com/js/platform.js" async defer>
+                  {lang: 'pt-BR'}
+                </script>
+
+                <!-- Posicione esta tag onde você deseja que o botão +1 apareça. -->
+                <div class="g-plusone" data-annotation="none" data-href="http://gridfor.me"></div>
+            </div>
+        </div>
         <section>
             <header>
                 <h2 id="what">What is it?</h2>

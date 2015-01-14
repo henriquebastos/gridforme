@@ -339,10 +339,10 @@ header, menu, nav, article, section, aside, details, figcaption, figure, footer 
 /*
  * Estruturas de Colunas fixas
  */
-.desktop-1 {
+.desktop-1, .site-social .facebook, .site-social .twitter, .site-social .gplus {
   max-width: 95px; }
 
-.desktop-1 {
+.desktop-1, .site-social .facebook, .site-social .twitter, .site-social .gplus {
   float: left;
   width: 100%; }
 
@@ -553,7 +553,7 @@ header, menu, nav, article, section, aside, details, figcaption, figure, footer 
 .col-left-4 {
   margin-left: 380px; }
 
-.col-left-5 {
+.col-left-5, .site-social {
   margin-left: 475px; }
 
 .col-left-6 {
@@ -739,7 +739,7 @@ header, menu, nav, article, section, aside, details, figcaption, figure, footer 
     Altura máxima do bloco HTML
     Ex: Um uso comum é aplicar a altura mínima numa linha: <div class="row min-h-7">
 */
-.max-h-1 {
+.max-h-1, .site-social {
   height: 30px;
   min-height: 1em;
   overflow: hidden; }
@@ -841,7 +841,7 @@ header, menu, nav, article, section, aside, details, figcaption, figure, footer 
 
 /* Primeiro ajuste de layout, quando menos que o tamanho máximo + 10 pixels */
 @media screen and (max-width: 960px) {
-  .desktop-1 {
+  .desktop-1, .site-social .facebook, .site-social .twitter, .site-social .gplus {
     width: 8%; }
 
   .desktop-2 {
@@ -883,7 +883,7 @@ header, menu, nav, article, section, aside, details, figcaption, figure, footer 
   .col-left-4 {
     margin-left: 32%; }
 
-  .col-left-5 {
+  .col-left-5, .site-social {
     margin-left: 40%; }
 
   .col-left-6 {
@@ -925,7 +925,7 @@ header, menu, nav, article, section, aside, details, figcaption, figure, footer 
   .col-right-9 {
     margin-right: 72%; }
 
-  .max-h-1 {
+  .max-h-1, .site-social {
     height: auto;
     min-height: 1em;
     overflow: hidden; }
@@ -1026,7 +1026,7 @@ header, menu, nav, article, section, aside, details, figcaption, figure, footer 
     overflow: hidden; } }
 /* FIM do primeiro ajuste de layout */
 @media screen and (max-width: 800px) {
-  .desktop-1 {
+  .desktop-1, .site-social .facebook, .site-social .twitter, .site-social .gplus {
     width: 100%;
     float: none;
     max-width: none; }
@@ -1122,6 +1122,7 @@ header, menu, nav, article, section, aside, details, figcaption, figure, footer 
   .col-left-3,
   .col-left-4,
   .col-left-5,
+  .site-social,
   .col-left-6,
   .col-left-7,
   .col-left-8,
@@ -1967,5 +1968,17 @@ input[type="submit"].btnRed:hover {
     padding: 0 15px; } }
 /* Fim @media (max-width: 800px) */
 /* FIM Botões de Interface  */
+.site-social {
+  text-align: right; }
+  .site-social .facebook {
+    padding-top: 3px;
+    display: inline; }
+  .site-social .twitter {
+    padding-top: 10px;
+    padding-left: 65px;
+    display: inline; }
+  .site-social .gplus {
+    padding-top: 6px;
+    display: inline; }
 
 /*# sourceMappingURL=style.css.map */
