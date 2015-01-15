@@ -300,7 +300,7 @@ header, menu, nav, article, section, aside, details, figcaption, figure, footer 
   padding: 0 0 0.5em; }
 
 /* Primeiro ajuste de layout, quando menos que o tamanho máximo + 10 pixels */
-@media (max-width: 960px) {
+@media (max-width: 770px) {
   figcaption {
     position: relative; } }
 /* FIM do primeiro ajuste de layout */
@@ -339,10 +339,10 @@ header, menu, nav, article, section, aside, details, figcaption, figure, footer 
 /*
  * Estruturas de Colunas fixas
  */
-.desktop-1, .site-social .facebook, .site-social .twitter, .site-social .gplus {
+.desktop-1 {
   max-width: 95px; }
 
-.desktop-1, .site-social .facebook, .site-social .twitter, .site-social .gplus {
+.desktop-1 {
   float: left;
   width: 100%; }
 
@@ -392,20 +392,6 @@ header, menu, nav, article, section, aside, details, figcaption, figure, footer 
   max-width: 760px; }
 
 .desktop-8, .site-header header, .site-content, footer {
-  float: left;
-  width: 100%; }
-
-.desktop-9 {
-  max-width: 855px; }
-
-.desktop-9 {
-  float: left;
-  width: 100%; }
-
-.desktop-10 {
-  max-width: 950px; }
-
-.desktop-10 {
   float: left;
   width: 100%; }
 
@@ -553,7 +539,7 @@ header, menu, nav, article, section, aside, details, figcaption, figure, footer 
 .col-left-4 {
   margin-left: 380px; }
 
-.col-left-5, .site-social {
+.col-left-5 {
   margin-left: 475px; }
 
 .col-left-6 {
@@ -561,12 +547,6 @@ header, menu, nav, article, section, aside, details, figcaption, figure, footer 
 
 .col-left-7 {
   margin-left: 665px; }
-
-.col-left-8 {
-  margin-left: 760px; }
-
-.col-left-9 {
-  margin-left: 855px; }
 
 .col-right-1 {
   margin-right: 95px; }
@@ -588,12 +568,6 @@ header, menu, nav, article, section, aside, details, figcaption, figure, footer 
 
 .col-right-7 {
   margin-right: 665px; }
-
-.col-right-8 {
-  margin-right: 760px; }
-
-.col-right-9 {
-  margin-right: 855px; }
 
 /*
 * Aplica o gutter entre as colunas usando o padding interno de cada coluna aplicada.
@@ -739,7 +713,7 @@ header, menu, nav, article, section, aside, details, figcaption, figure, footer 
     Altura máxima do bloco HTML
     Ex: Um uso comum é aplicar a altura mínima numa linha: <div class="row min-h-7">
 */
-.max-h-1, .site-social {
+.max-h-1 {
   height: 30px;
   min-height: 1em;
   overflow: hidden; }
@@ -840,8 +814,8 @@ header, menu, nav, article, section, aside, details, figcaption, figure, footer 
   overflow: hidden; }
 
 /* Primeiro ajuste de layout, quando menos que o tamanho máximo + 10 pixels */
-@media screen and (max-width: 960px) {
-  .desktop-1, .site-social .facebook, .site-social .twitter, .site-social .gplus {
+@media screen and (max-width: 770px) {
+  .desktop-1 {
     width: 8%; }
 
   .desktop-2 {
@@ -865,12 +839,6 @@ header, menu, nav, article, section, aside, details, figcaption, figure, footer 
   .desktop-8, .site-header header, .site-content, footer {
     width: 64%; }
 
-  .desktop-9 {
-    width: 72%; }
-
-  .desktop-10 {
-    width: 80%; }
-
   .col-left-1 {
     margin-left: 8%; }
 
@@ -883,7 +851,7 @@ header, menu, nav, article, section, aside, details, figcaption, figure, footer 
   .col-left-4 {
     margin-left: 32%; }
 
-  .col-left-5, .site-social {
+  .col-left-5 {
     margin-left: 40%; }
 
   .col-left-6 {
@@ -891,12 +859,6 @@ header, menu, nav, article, section, aside, details, figcaption, figure, footer 
 
   .col-left-7 {
     margin-left: 56%; }
-
-  .col-left-8 {
-    margin-left: 64%; }
-
-  .col-left-9 {
-    margin-left: 72%; }
 
   .col-right-1 {
     margin-right: 8%; }
@@ -919,13 +881,7 @@ header, menu, nav, article, section, aside, details, figcaption, figure, footer 
   .col-right-7 {
     margin-right: 56%; }
 
-  .col-right-8 {
-    margin-right: 64%; }
-
-  .col-right-9 {
-    margin-right: 72%; }
-
-  .max-h-1, .site-social {
+  .max-h-1 {
     height: auto;
     min-height: 1em;
     overflow: hidden; }
@@ -1026,7 +982,7 @@ header, menu, nav, article, section, aside, details, figcaption, figure, footer 
     overflow: hidden; } }
 /* FIM do primeiro ajuste de layout */
 @media screen and (max-width: 800px) {
-  .desktop-1, .site-social .facebook, .site-social .twitter, .site-social .gplus {
+  .desktop-1 {
     width: 100%;
     float: none;
     max-width: none; }
@@ -1062,16 +1018,6 @@ header, menu, nav, article, section, aside, details, figcaption, figure, footer 
     max-width: none; }
 
   .desktop-8, .site-header header, .site-content, footer {
-    width: 100%;
-    float: none;
-    max-width: none; }
-
-  .desktop-9 {
-    width: 100%;
-    float: none;
-    max-width: none; }
-
-  .desktop-10 {
     width: 100%;
     float: none;
     max-width: none; }
@@ -1122,7 +1068,6 @@ header, menu, nav, article, section, aside, details, figcaption, figure, footer 
   .col-left-3,
   .col-left-4,
   .col-left-5,
-  .site-social,
   .col-left-6,
   .col-left-7,
   .col-left-8,
@@ -1184,18 +1129,19 @@ header, menu, nav, article, section, aside, details, figcaption, figure, footer 
     width: 100%;
     float: none; } }
 /* Nicolas Gallagher's micro clearfix */
-.row, .site-header, .site-header header, .site-content section {
+.row, .site-header, .site-header header, .site-content section, .site-social {
   *zoom: 1; }
 
-.row:before, .site-header:before, .site-header header:before, .site-content section:before,
+.row:before, .site-header:before, .site-header header:before, .site-content section:before, .site-social:before,
 .row:after,
 .site-header:after,
 .site-header header:after,
-.site-content section:after {
+.site-content section:after,
+.site-social:after {
   content: " ";
   display: table; }
 
-.row:after, .site-header:after, .site-header header:after, .site-content section:after {
+.row:after, .site-header:after, .site-header header:after, .site-content section:after, .site-social:after {
   clear: both; }
 
 /* FIM Grid e Normalizador */
@@ -1294,7 +1240,7 @@ header, menu, nav, article, section, aside, details, figcaption, figure, footer 
   padding: 0; }
 
 /* Primeiro ajuste de layout, quando menos que o tamanho máximo + 10 pixels */
-@media (max-width: 960px) {
+@media (max-width: 770px) {
   .header-inline .header-search, .site-header header .header-search {
     position: relative;
     right: 0;
@@ -1653,7 +1599,7 @@ figcaption a,
   padding-top: 1.4em; }
 
 /* Primeiro ajuste de layout, quando menos que o tamanho máximo + 10 pixels */
-@media (max-width: 960px) {
+@media (max-width: 770px) {
   .img,
   figure {
     padding: 15px 0; }
@@ -1968,18 +1914,21 @@ input[type="submit"].btnRed:hover {
     padding: 0 15px; } }
 /* Fim @media (max-width: 800px) */
 /* FIM Botões de Interface  */
-.site-social .facebook {
-  padding-top: 3px;
-  display: inline; }
-  .site-social .facebook div {
-    width: 140px; }
-.site-social .twitter {
-  padding-top: 10px;
-  padding-left: 65px;
-  display: inline; }
-.site-social .gplus {
-  padding-top: 6px;
-  padding-left: 56px;
-  display: inline; }
+.social, .site-social .facebook, .site-social .twitter, .site-social .gplus {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 17px; }
+
+.site-social {
+  height: 30px;
+  overflow: hidden;
+  text-align: right; }
+  .site-social .facebook {
+    padding-top: 3px; }
+  .site-social .twitter {
+    padding-top: 10px; }
+  .site-social .gplus {
+    padding-top: 6px;
+    margin-right: 0; }
 
 /*# sourceMappingURL=style.css.map */

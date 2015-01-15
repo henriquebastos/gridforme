@@ -29,30 +29,30 @@ hr {
   }
 }
 
+.social {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: $basal-gutter + 2;
+}
+
 .site-social {
-  @extend .col-left-5;
-  @extend .max-h-1;
+  @extend .row;
+  height: 30px;
+  overflow: hidden;
+  text-align: right;
 
   .facebook {
-    @extend .desktop-1;
+    @extend .social;
     padding-top: 3px;
-    display: inline;
-
-    div {
-      width: 140px;
-    }
   }
   .twitter {
+    @extend .social;
     padding-top: 10px;
-    padding-left: 65px;
-    @extend .desktop-1;
-    display: inline;
   }
   .gplus {
-    @extend .desktop-1;
+    @extend .social;
     padding-top: 6px;
-    padding-left: 56px;
-    display: inline;
+    margin-right: 0;
   }
 }
 
@@ -64,4 +64,3 @@ footer {
     @extend .padding-top-1;
   }
 }
-
