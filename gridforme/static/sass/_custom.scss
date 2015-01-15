@@ -32,12 +32,15 @@ hr {
 .site-social {
   @extend .col-left-5;
   @extend .max-h-1;
-  text-align: right;
 
   .facebook {
     @extend .desktop-1;
     padding-top: 3px;
     display: inline;
+
+    div {
+      width: 140px;
+    }
   }
   .twitter {
     padding-top: 10px;
@@ -48,6 +51,7 @@ hr {
   .gplus {
     @extend .desktop-1;
     padding-top: 6px;
+    padding-left: 56px;
     display: inline;
   }
 }

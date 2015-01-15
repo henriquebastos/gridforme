@@ -1968,17 +1968,18 @@ input[type="submit"].btnRed:hover {
     padding: 0 15px; } }
 /* Fim @media (max-width: 800px) */
 /* FIM Botões de Interface  */
-.site-social {
-  text-align: right; }
-  .site-social .facebook {
-    padding-top: 3px;
-    display: inline; }
-  .site-social .twitter {
-    padding-top: 10px;
-    padding-left: 65px;
-    display: inline; }
-  .site-social .gplus {
-    padding-top: 6px;
-    display: inline; }
+.site-social .facebook {
+  padding-top: 3px;
+  display: inline; }
+  .site-social .facebook div {
+    width: 140px; }
+.site-social .twitter {
+  padding-top: 10px;
+  padding-left: 65px;
+  display: inline; }
+.site-social .gplus {
+  padding-top: 6px;
+  padding-left: 56px;
+  display: inline; }
 
 /*# sourceMappingURL=style.css.map */
